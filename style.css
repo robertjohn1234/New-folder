@@ -1,0 +1,1748 @@
+/* ===================================
+   PH PERTAMA ISTC THEME
+=================================== */
+
+:root{
+
+  --primary:#0066C7;
+  --secondary:#E62E2E;
+  --accent:#F2C500;
+
+  --dark:#0E1B2A;
+  --dark2:#17263A;
+
+  --light:#F4F6F8;
+  --white:#FFFFFF;
+
+  --shadow:
+  0 15px 35px rgba(0,0,0,.12);
+
+}
+
+/* ===================================
+   RESET
+=================================== */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+
+  font-family:'Poppins',sans-serif;
+
+  color:#333;
+
+  background:#fff;
+
+  overflow-x:hidden;
+
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+a{
+  text-decoration:none;
+}
+
+ul{
+  list-style:none;
+}
+
+.container{
+
+  width:90%;
+  max-width:1300px;
+
+  margin:auto;
+
+}
+
+/* ===================================
+   HEADER
+=================================== */
+
+header{
+
+  position:fixed;
+
+  top:0;
+  left:0;
+
+  width:100%;
+
+  z-index:1000;
+
+  transition:.4s;
+
+}
+
+header.scrolled{
+
+  background:rgba(14,27,42,.97);
+
+  backdrop-filter:blur(10px);
+
+  box-shadow:0 5px 20px rgba(0,0,0,.25);
+
+}
+
+.nav-container{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  padding:15px 0;
+
+}
+
+.logo-area{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:15px;
+
+}
+
+.logo-area img{
+
+  height:65px;
+
+}
+
+.logo-area h3{
+
+  color:white;
+
+  font-size:1.1rem;
+
+}
+
+.logo-area small{
+
+  color:#ddd;
+
+}
+
+nav ul{
+
+  display:flex;
+
+  gap:30px;
+
+}
+
+nav a{
+
+  color:white;
+
+  font-weight:500;
+
+  transition:.3s;
+
+}
+
+nav a:hover{
+
+  color:var(--accent);
+
+}
+
+.nav-actions{
+
+  display:flex;
+
+  gap:10px;
+
+}
+
+.nav-actions button{
+
+  width:42px;
+  height:42px;
+
+  border:none;
+
+  border-radius:50%;
+
+  cursor:pointer;
+
+  background:rgba(255,255,255,.15);
+
+  color:white;
+
+}
+
+/* ===================================
+   HERO
+=================================== */
+
+#home{
+
+  height:100vh;
+
+  position:relative;
+
+  overflow:hidden;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+}
+
+#heroVideo{
+
+  position:absolute;
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+}
+
+.hero-overlay{
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+  linear-gradient(
+  135deg,
+  rgba(0,102,199,.82),
+  rgba(14,27,42,.92)
+  );
+
+}
+
+.hero-content{
+
+  position:relative;
+
+  z-index:2;
+
+  text-align:center;
+
+  width:90%;
+
+  max-width:1000px;
+
+  color:white;
+
+}
+
+.hero-logo{
+
+  width:130px;
+
+  margin:auto;
+
+  margin-bottom:20px;
+
+}
+
+.hero-content h4{
+
+  color:var(--accent);
+
+  letter-spacing:3px;
+
+  margin-bottom:15px;
+
+}
+
+.hero-content h1{
+
+  font-size:4rem;
+
+  line-height:1.2;
+
+  margin-bottom:25px;
+
+}
+
+.hero-content p{
+
+  max-width:800px;
+
+  margin:auto;
+
+  margin-bottom:35px;
+
+  font-size:1.15rem;
+
+}
+
+.hero-buttons{
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:20px;
+
+  flex-wrap:wrap;
+
+}
+
+.btn-primary{
+
+  background:var(--secondary);
+
+  color:white;
+
+  padding:15px 35px;
+
+  border-radius:6px;
+
+  transition:.3s;
+
+}
+
+.btn-primary:hover{
+
+  background:#bf2323;
+
+}
+
+.btn-secondary{
+
+  border:2px solid white;
+
+  color:white;
+
+  padding:15px 35px;
+
+  border-radius:6px;
+
+}
+
+/* ===================================
+   SECTION
+=================================== */
+
+section{
+
+  padding:100px 0;
+
+}
+
+.section-title{
+
+  text-align:center;
+
+  margin-bottom:60px;
+
+}
+
+.section-title h2{
+
+  color:var(--primary);
+
+  font-size:2.7rem;
+
+}
+
+.section-title h2::after{
+
+  content:"";
+
+  display:block;
+
+  width:90px;
+
+  height:4px;
+
+  background:var(--secondary);
+
+  margin:15px auto;
+
+}
+
+/* ===================================
+   STATS
+=================================== */
+
+#stats{
+
+  background:var(--light);
+
+}
+
+.stats-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(250px,1fr));
+
+  gap:25px;
+
+}
+
+.stat-card{
+
+  background:white;
+
+  padding:40px;
+
+  text-align:center;
+
+  border-radius:15px;
+
+  box-shadow:var(--shadow);
+
+}
+
+.stat-card span{
+
+  display:block;
+
+  font-size:3rem;
+
+  font-weight:700;
+
+  color:var(--primary);
+
+}
+
+.stat-card h3{
+
+  margin-top:15px;
+
+}
+
+/* ===================================
+   ABOUT
+=================================== */
+
+.about-grid{
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:50px;
+
+  align-items:center;
+
+}
+
+.about-image img{
+
+  border-radius:20px;
+
+  box-shadow:var(--shadow);
+
+}
+
+.about-content h3{
+
+  color:var(--primary);
+
+  margin-bottom:20px;
+
+}
+
+.about-content p{
+
+  line-height:1.8;
+
+}
+
+/* ===================================
+   MVV
+=================================== */
+
+#mvv{
+
+  background:var(--light);
+
+}
+
+.mvv-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(300px,1fr));
+
+  gap:25px;
+
+}
+
+.mvv-card{
+
+  background:white;
+
+  text-align:center;
+
+  padding:40px;
+
+  border-radius:15px;
+
+  box-shadow:var(--shadow);
+
+}
+
+.mvv-card i{
+
+  font-size:3rem;
+
+  color:var(--secondary);
+
+  margin-bottom:20px;
+
+}
+
+/* ===================================
+   SERVICES
+=================================== */
+
+.services-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(250px,1fr));
+
+  gap:25px;
+
+}
+
+.service-card{
+
+  background:white;
+
+  padding:40px;
+
+  text-align:center;
+
+  border-radius:15px;
+
+  box-shadow:var(--shadow);
+
+  border-top:5px solid var(--primary);
+
+  transition:.3s;
+
+}
+
+.service-card:hover{
+
+  transform:translateY(-10px);
+
+  border-top-color:var(--secondary);
+
+}
+
+.service-card i{
+
+  font-size:3rem;
+
+  color:var(--primary);
+
+  margin-bottom:20px;
+
+}
+
+/* ===================================
+   PROJECTS
+=================================== */
+
+.project-filters{
+
+  text-align:center;
+
+  margin-bottom:40px;
+
+}
+
+.project-filters button{
+
+  padding:12px 25px;
+
+  margin:5px;
+
+  border:none;
+
+  cursor:pointer;
+
+  border-radius:30px;
+
+}
+
+.filter.active{
+
+  background:var(--primary);
+
+  color:white;
+
+}
+
+.projects-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(320px,1fr));
+
+  gap:25px;
+
+}
+
+.project{
+
+  overflow:hidden;
+
+  border-radius:15px;
+
+  box-shadow:var(--shadow);
+
+  cursor:pointer;
+
+}
+
+.project img{
+
+  width:100%;
+
+  height:280px;
+
+  object-fit:cover;
+
+}
+
+.project-info{
+
+  background:var(--dark);
+
+  color:white;
+
+  padding:20px;
+
+}
+
+/* ===================================
+   TIMELINE
+=================================== */
+
+#timeline{
+
+  background:var(--light);
+
+}
+
+.timeline{
+
+  display:grid;
+
+  gap:25px;
+
+}
+
+.timeline-item{
+
+  background:white;
+
+  padding:25px;
+
+  border-left:5px solid var(--primary);
+
+  box-shadow:var(--shadow);
+
+  border-radius:10px;
+
+}
+
+.timeline-item h4{
+
+  color:var(--secondary);
+
+}
+
+/* ===================================
+   TEAM
+=================================== */
+
+.team-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(250px,1fr));
+
+  gap:25px;
+
+}
+
+.team-card{
+
+  text-align:center;
+
+  background:white;
+
+  border-radius:15px;
+
+  padding:30px;
+
+  box-shadow:var(--shadow);
+
+}
+
+.team-card img{
+
+  width:140px;
+  height:140px;
+
+  border-radius:50%;
+
+  object-fit:cover;
+
+  margin:auto;
+
+  margin-bottom:15px;
+
+}
+
+/* ===================================
+   CERTIFICATIONS
+=================================== */
+
+#certifications{
+
+  background:var(--light);
+
+}
+
+.cert-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(250px,1fr));
+
+  gap:25px;
+
+}
+
+.cert-card{
+
+  background:white;
+
+  text-align:center;
+
+  padding:40px;
+
+  border-radius:15px;
+
+  box-shadow:var(--shadow);
+
+  font-weight:700;
+
+  color:var(--primary);
+
+}
+
+/* ===================================
+   CALCULATOR
+=================================== */
+
+.calculator-box{
+
+  max-width:700px;
+
+  margin:auto;
+
+  background:white;
+
+  padding:40px;
+
+  border-radius:15px;
+
+  box-shadow:var(--shadow);
+
+}
+
+.calculator-box select,
+.calculator-box input{
+
+  width:100%;
+
+  padding:15px;
+
+  margin-bottom:15px;
+
+}
+
+.calculator-box button{
+
+  width:100%;
+
+  padding:15px;
+
+  border:none;
+
+  background:var(--secondary);
+
+  color:white;
+
+  cursor:pointer;
+
+}
+
+/* ===================================
+   CONTACT
+=================================== */
+
+#contact{
+
+  background:
+  linear-gradient(
+  135deg,
+  var(--primary),
+  var(--dark)
+  );
+
+}
+
+#contact .section-title h2{
+
+  color:white;
+
+}
+
+form{
+
+  max-width:700px;
+
+  margin:auto;
+
+}
+
+form input,
+form textarea{
+
+  width:100%;
+
+  padding:15px;
+
+  margin-bottom:15px;
+
+  border:none;
+
+  border-radius:8px;
+
+}
+
+form button{
+
+  width:100%;
+
+  padding:15px;
+
+  border:none;
+
+  background:var(--secondary);
+
+  color:white;
+
+  cursor:pointer;
+
+}
+
+/* ===================================
+   FOOTER
+=================================== */
+
+footer{
+
+  background:var(--dark);
+
+  color:white;
+
+  text-align:center;
+
+  padding:50px 20px;
+
+}
+
+.footer-links{
+
+  margin-top:20px;
+
+}
+
+.footer-links a{
+
+  color:white;
+
+  margin:0 10px;
+
+}
+
+/* ===================================
+   FLOATING BUTTONS
+=================================== */
+
+#topBtn,
+#whatsappBtn{
+
+  position:fixed;
+
+  width:55px;
+  height:55px;
+
+  border-radius:50%;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  font-size:1.3rem;
+
+  z-index:999;
+
+}
+
+#topBtn{
+
+  right:25px;
+  bottom:25px;
+
+  border:none;
+
+  background:var(--secondary);
+
+  color:white;
+
+  display:none;
+
+}
+
+#whatsappBtn{
+
+  left:25px;
+  bottom:25px;
+
+  background:#25D366;
+
+  color:white;
+
+}
+
+/* ===================================
+   PROJECT MODAL
+=================================== */
+
+#projectModal{
+
+  position:fixed;
+
+  inset:0;
+
+  background:rgba(0,0,0,.95);
+
+  display:none;
+
+  justify-content:center;
+  align-items:center;
+
+  z-index:5000;
+
+}
+
+#modalImage{
+
+  max-width:90%;
+  max-height:90%;
+
+}
+
+#closeModal{
+
+  position:absolute;
+
+  top:30px;
+  right:40px;
+
+  color:white;
+
+  font-size:3rem;
+
+  cursor:pointer;
+
+}
+
+/* ===================================
+   MOBILE
+=================================== */
+
+#menuBtn{
+
+  display:none;
+
+}
+
+.mobile-menu{
+
+  display:none;
+
+}
+
+@media(max-width:991px){
+
+  nav{
+
+    display:none;
+
+  }
+
+  #menuBtn{
+
+    display:block;
+
+  }
+
+  .about-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .hero-content h1{
+
+    font-size:2.6rem;
+
+  }
+
+}
+
+@media(max-width:768px){
+
+  .hero-content h1{
+
+    font-size:2rem;
+
+  }
+
+  .hero-buttons{
+
+    flex-direction:column;
+
+  }
+
+  .section-title h2{
+
+    font-size:2rem;
+
+  }
+
+}
+
+/* ===================================
+   ADVANCED VISUAL EFFECTS
+=================================== */
+
+/* Smooth transitions */
+
+*{
+  transition:
+  background-color .3s ease,
+  color .3s ease,
+  border-color .3s ease,
+  box-shadow .3s ease,
+  transform .3s ease;
+}
+
+/* ===================================
+   GLASSMORPHISM
+=================================== */
+
+.stat-card,
+.service-card,
+.team-card,
+.cert-card,
+.calculator-box,
+.mvv-card{
+
+  backdrop-filter:blur(12px);
+
+  background:
+  rgba(255,255,255,.92);
+
+}
+
+/* ===================================
+   HERO ANIMATIONS
+=================================== */
+
+.hero-logo{
+
+  animation:
+  floatLogo 4s ease-in-out infinite;
+
+}
+
+@keyframes floatLogo{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-12px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+
+}
+
+.hero-content h1{
+
+  animation:
+  slideUp 1s ease;
+
+}
+
+.hero-content p{
+
+  animation:
+  slideUp 1.3s ease;
+
+}
+
+.hero-buttons{
+
+  animation:
+  slideUp 1.6s ease;
+
+}
+
+@keyframes slideUp{
+
+  from{
+
+    opacity:0;
+
+    transform:
+    translateY(40px);
+
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:
+    translateY(0);
+
+  }
+
+}
+
+/* ===================================
+   BUTTON EFFECTS
+=================================== */
+
+.btn-primary{
+
+  position:relative;
+
+  overflow:hidden;
+
+}
+
+.btn-primary::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:0;
+
+  height:100%;
+
+  left:0;
+  top:0;
+
+  background:
+  rgba(255,255,255,.15);
+
+  transition:.4s;
+
+}
+
+.btn-primary:hover::before{
+
+  width:100%;
+
+}
+
+.btn-primary:hover{
+
+  transform:
+  translateY(-3px);
+
+  box-shadow:
+  0 15px 30px rgba(0,0,0,.25);
+
+}
+
+/* ===================================
+   STATISTICS EFFECTS
+=================================== */
+
+.stat-card{
+
+  position:relative;
+
+  overflow:hidden;
+
+}
+
+.stat-card::after{
+
+  content:"";
+
+  position:absolute;
+
+  top:-50%;
+
+  left:-50%;
+
+  width:200%;
+
+  height:200%;
+
+  background:
+  radial-gradient(
+  rgba(0,102,199,.08),
+  transparent 70%
+  );
+
+}
+
+.stat-card:hover{
+
+  transform:
+  translateY(-8px);
+
+}
+
+/* ===================================
+   SERVICES
+=================================== */
+
+.service-card{
+
+  position:relative;
+
+}
+
+.service-card::before{
+
+  content:"";
+
+  position:absolute;
+
+  bottom:0;
+  left:0;
+
+  width:100%;
+
+  height:0;
+
+  background:
+  linear-gradient(
+  180deg,
+  transparent,
+  rgba(0,102,199,.05)
+  );
+
+  transition:.3s;
+
+}
+
+.service-card:hover::before{
+
+  height:100%;
+
+}
+
+.service-card:hover i{
+
+  color:var(--secondary);
+
+  transform:scale(1.1);
+
+}
+
+/* ===================================
+   PROJECTS
+=================================== */
+
+.project{
+
+  position:relative;
+
+}
+
+.project img{
+
+  transition:
+  transform .6s ease;
+
+}
+
+.project:hover img{
+
+  transform:scale(1.08);
+
+}
+
+.project-info{
+
+  transition:.4s;
+
+}
+
+.project:hover .project-info{
+
+  background:
+  var(--primary);
+
+}
+
+.project::after{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+  rgba(0,0,0,.15);
+
+  opacity:0;
+
+  transition:.4s;
+
+}
+
+.project:hover::after{
+
+  opacity:1;
+
+}
+
+/* ===================================
+   TIMELINE
+=================================== */
+
+.timeline{
+
+  position:relative;
+
+}
+
+.timeline::before{
+
+  content:"";
+
+  position:absolute;
+
+  left:25px;
+
+  top:0;
+
+  width:4px;
+
+  height:100%;
+
+  background:var(--primary);
+
+}
+
+.timeline-item{
+
+  position:relative;
+
+  margin-left:60px;
+
+}
+
+.timeline-item::before{
+
+  content:"";
+
+  position:absolute;
+
+  left:-48px;
+
+  top:22px;
+
+  width:18px;
+  height:18px;
+
+  border-radius:50%;
+
+  background:var(--secondary);
+
+  border:4px solid white;
+
+}
+
+.timeline-item:hover{
+
+  transform:
+  translateX(10px);
+
+}
+
+/* ===================================
+   TEAM SECTION
+=================================== */
+
+.team-card{
+
+  overflow:hidden;
+
+}
+
+.team-card img{
+
+  transition:.4s;
+
+}
+
+.team-card:hover img{
+
+  transform:scale(1.08);
+
+}
+
+.team-card:hover{
+
+  transform:
+  translateY(-10px);
+
+}
+
+.team-card h4{
+
+  color:var(--primary);
+
+}
+
+/* ===================================
+   CERTIFICATIONS
+=================================== */
+
+.cert-card{
+
+  border-top:5px solid var(--primary);
+
+}
+
+.cert-card:hover{
+
+  border-top-color:
+  var(--secondary);
+
+  transform:
+  translateY(-8px);
+
+}
+
+/* ===================================
+   CALCULATOR
+=================================== */
+
+.calculator-box{
+
+  position:relative;
+
+}
+
+.calculator-box::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  border-radius:15px;
+
+  padding:2px;
+
+  background:
+  linear-gradient(
+  135deg,
+  var(--primary),
+  var(--secondary)
+  );
+
+  -webkit-mask:
+  linear-gradient(#fff 0 0)
+  content-box,
+  linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite:xor;
+
+  pointer-events:none;
+
+}
+
+/* ===================================
+   FORM EFFECTS
+=================================== */
+
+input:focus,
+textarea:focus,
+select:focus{
+
+  outline:none;
+
+  box-shadow:
+  0 0 0 3px
+  rgba(0,102,199,.25);
+
+}
+
+/* ===================================
+   FOOTER
+=================================== */
+
+.footer-links a:hover{
+
+  color:var(--accent);
+
+}
+
+/* ===================================
+   FLOATING BUTTONS
+=================================== */
+
+#topBtn,
+#whatsappBtn{
+
+  box-shadow:
+  0 10px 25px rgba(0,0,0,.3);
+
+}
+
+#topBtn:hover,
+#whatsappBtn:hover{
+
+  transform:
+  translateY(-4px);
+
+}
+
+/* ===================================
+   MOBILE MENU
+=================================== */
+
+.mobile-menu{
+
+  position:fixed;
+
+  top:0;
+  right:-100%;
+
+  width:300px;
+
+  height:100vh;
+
+  background:
+  rgba(14,27,42,.98);
+
+  z-index:3000;
+
+  padding-top:100px;
+
+  transition:.4s;
+
+}
+
+.mobile-menu.active{
+
+  right:0;
+
+}
+
+.mobile-menu a{
+
+  display:block;
+
+  padding:18px 35px;
+
+  color:white;
+
+  border-bottom:
+  1px solid rgba(255,255,255,.08);
+
+}
+
+.mobile-menu a:hover{
+
+  background:
+  rgba(255,255,255,.08);
+
+}
+
+/* ===================================
+   DARK MODE
+=================================== */
+
+body.dark-mode{
+
+  background:#111827;
+
+  color:#d1d5db;
+
+}
+
+body.dark-mode section{
+
+  background:#111827;
+
+}
+
+body.dark-mode .section-title h2{
+
+  color:#60A5FA;
+
+}
+
+body.dark-mode .stat-card,
+body.dark-mode .service-card,
+body.dark-mode .team-card,
+body.dark-mode .cert-card,
+body.dark-mode .calculator-box,
+body.dark-mode .mvv-card{
+
+  background:#1f2937;
+
+  color:#d1d5db;
+
+}
+
+body.dark-mode #stats,
+body.dark-mode #mvv,
+body.dark-mode #timeline,
+body.dark-mode #certifications{
+
+  background:#0f172a;
+
+}
+
+body.dark-mode .timeline-item{
+
+  background:#1f2937;
+
+}
+
+body.dark-mode .project-info{
+
+  background:#1f2937;
+
+}
+
+body.dark-mode footer{
+
+  background:#020617;
+
+}
+
+/* ===================================
+   REVEAL ANIMATION
+=================================== */
+
+.reveal{
+
+  opacity:0;
+
+  transform:
+  translateY(40px);
+
+}
+
+.reveal.show{
+
+  opacity:1;
+
+  transform:
+  translateY(0);
+
+}
+
+/* ===================================
+   LARGE SCREENS
+=================================== */
+
+@media(min-width:1400px){
+
+  .hero-content h1{
+
+    font-size:5rem;
+
+  }
+
+}
+
+/* ===================================
+   SMALL MOBILE
+=================================== */
+
+@media(max-width:480px){
+
+  .hero-logo{
+
+    width:90px;
+
+  }
+
+  .hero-content h1{
+
+    font-size:1.6rem;
+
+  }
+
+  .hero-content h4{
+
+    font-size:.8rem;
+
+  }
+
+  .timeline-item{
+
+    margin-left:40px;
+
+  }
+
+}
