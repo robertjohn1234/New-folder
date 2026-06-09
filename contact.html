@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Us | PH Pertama ISTC</title>
+
+<meta name="description"
+content="Contact PH Pertama ISTC for engineering, construction, electrical, mechanical and automation project inquiries.">
+
+<link rel="icon"
+href="https://i.postimg.cc/mrgH3jV1/Untitled.png">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet"
+href="css/style.css">
+
+</head>
+
+<body>
+
+<header id="header" class="scrolled">
+
+<div class="container nav-container">
+
+<a href="index.html" class="logo-area">
+
+<img src="https://i.postimg.cc/mrgH3jV1/Untitled.png">
+
+<div>
+<h3>PH PERTAMA ISTC</h3>
+<span>Industrial Engineering & Construction</span>
+</div>
+
+</a>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="careers.html">Careers</a></li>
+<li><a href="contact.html" class="active-nav">Contact</a></li>
+</ul>
+</nav>
+
+</div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero" style="height:60vh;">
+
+<div class="hero-overlay"></div>
+
+<img
+src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80"
+class="hero-video">
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="hero-badge">
+
+CONTACT US
+
+</div>
+
+<h1>
+
+Let's Discuss Your Project
+
+</h1>
+
+<p>
+
+Request a quotation, consultation,
+or engineering support today.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT SECTION -->
+
+<section>
+
+<div class="container">
+
+<div class="contact-grid">
+
+<!-- CONTACT INFO -->
+
+<div class="contact-info">
+
+<h2>Get In Touch</h2>
+
+<p>
+
+Our team is ready to support your
+engineering and construction requirements.
+
+</p>
+
+<div class="contact-item">
+<i class="fa-solid fa-location-dot"></i>
+<span>Your Office Address Here</span>
+</div>
+
+<div class="contact-item">
+<i class="fa-solid fa-phone"></i>
+<span>+63 XXX XXX XXXX</span>
+</div>
+
+<div class="contact-item">
+<i class="fa-solid fa-envelope"></i>
+<span>info@phpertamaistc.com</span>
+</div>
+
+<div class="contact-item">
+<i class="fa-brands fa-whatsapp"></i>
+<span>WhatsApp Available</span>
+</div>
+
+<div class="contact-item">
+<i class="fa-solid fa-clock"></i>
+<span>Monday - Saturday | 8:00 AM - 5:00 PM</span>
+</div>
+
+</div>
+
+<!-- CONTACT FORM -->
+
+<div>
+
+<form onsubmit="submitContactForm(event)"
+class="contact-form">
+
+<input
+type="text"
+placeholder="Full Name"
+required>
+
+<input
+type="email"
+placeholder="Email Address"
+required>
+
+<input
+type="text"
+placeholder="Company Name">
+
+<input
+type="tel"
+placeholder="Mobile Number">
+
+<select required>
+
+<option value="">
+Select Inquiry Type
+</option>
+
+<option>
+Request for Quotation
+</option>
+
+<option>
+Project Consultation
+</option>
+
+<option>
+Maintenance Services
+</option>
+
+<option>
+Engineering Services
+</option>
+
+<option>
+General Inquiry
+</option>
+
+</select>
+
+<textarea
+rows="6"
+placeholder="Project Details"
+required>
+</textarea>
+
+<input
+type="file">
+
+<button
+type="submit"
+class="btn-primary">
+
+Submit Inquiry
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- QUICK QUOTE -->
+
+<section class="mvv-section">
+
+<div class="container">
+
+<div class="section-header">
+
+<span>PROJECT ESTIMATOR</span>
+
+<h2>Quick Budget Estimate</h2>
+
+</div>
+
+<div style="max-width:700px;margin:auto;">
+
+<select
+id="projectType"
+style="width:100%;padding:15px;margin-bottom:15px;">
+
+<option value="25000">
+Electrical Works
+</option>
+
+<option value="35000">
+Mechanical Works
+</option>
+
+<option value="50000">
+Industrial Construction
+</option>
+
+<option value="40000">
+Automation
+</option>
+
+</select>
+
+<input
+id="projectArea"
+type="number"
+placeholder="Project Size (sqm)"
+style="width:100%;padding:15px;margin-bottom:15px;">
+
+<button
+onclick="calculateEstimate()"
+class="btn-primary">
+
+Calculate
+
+</button>
+
+<h3
+id="estimateResult"
+style="margin-top:20px;">
+</h3>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GOOGLE MAP -->
+
+<section>
+
+<div class="container">
+
+<div class="section-header">
+
+<span>LOCATION</span>
+
+<h2>Find Us</h2>
+
+</div>
+
+<div class="contact-map">
+
+<iframe
+src="https://maps.google.com/maps?q=manila&t=&z=13&ie=UTF8&iwloc=&output=embed"
+allowfullscreen
+loading="lazy">
+</iframe>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta-section">
+
+<div class="container">
+
+<div class="cta-content">
+
+<h2>
+
+Need Immediate Assistance?
+
+</h2>
+
+<p>
+
+Our team is available to discuss
+your project requirements.
+
+</p>
+
+<a
+href="https://wa.me/639123456789"
+target="_blank"
+class="btn-primary">
+
+Chat on WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="container">
+
+<div class="footer-bottom">
+
+<p>
+
+© 2026 PH Pertama ISTC.
+All Rights Reserved.
+
+</p>
+
+</div>
+
+</div>
+
+</footer>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

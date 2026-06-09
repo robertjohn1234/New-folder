@@ -1155,3 +1155,55 @@ body.dark-mode .certifications-section{
     }
 
 }
+
+/* ==================================================
+   Projects Additional Styles
+================================================== */
+
+.project-item{
+    transition:.3s;
+}
+
+.project-card{
+    cursor:pointer;
+}
+
+.project-card:hover img{
+    transform:scale(1.05);
+}
+
+.project-card img{
+    transition:.4s;
+}
+
+/* ==================================================
+   Contacts Additional Styles
+================================================== */
+
+/* CONTACT FORM */
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select{
+
+    width:100%;
+    padding:15px;
+
+    border:1px solid #ddd;
+    border-radius:8px;
+
+    font-family:inherit;
+
+}
+
+.contact-form button{
+    width:fit-content;
+}
+
+
