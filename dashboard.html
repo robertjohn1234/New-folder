@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Project Dashboard | PH Pertama ISTC</title>
+
+<link rel="icon"
+href="https://i.postimg.cc/mrgH3jV1/Untitled.png">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet"
+href="css/dashboard.css">
+
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <img src="https://i.postimg.cc/mrgH3jV1/Untitled.png">
+
+            <h3>
+                PH PERTAMA ISTC
+            </h3>
+
+            <span>
+                Project Control System
+            </span>
+
+        </div>
+
+        <ul>
+
+            <li class="active">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Dashboard</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Look Ahead</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-users"></i>
+                <span>Manpower</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-boxes-stacked"></i>
+                <span>Materials</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-helmet-safety"></i>
+                <span>Equipment</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-clipboard-check"></i>
+                <span>Inspection</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-file-circle-question"></i>
+                <span>RFI Tracker</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <span>NCR Tracker</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-list-check"></i>
+                <span>Punch List</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-folder-open"></i>
+                <span>Documents</span>
+            </li>
+
+            <li>
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Reports</span>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <!-- HEADER -->
+
+        <div class="dashboard-header">
+
+            <div id="dashboardClock"></div>
+
+            <div>
+
+                <h1>
+                    Project Dashboard
+                </h1>
+
+                <p>
+                    Steel Plant Modernization Project
+                </p>
+
+            </div>
+
+            <div class="header-actions">
+
+                <button
+                    onclick="refreshDashboard()"
+                    class="btn-primary">
+
+                    Refresh
+
+                </button>
+
+                <button
+                    onclick="printDailyReport()"
+                    class="btn-primary">
+
+                    Print Report
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- KPI CARDS -->
+
+        <section class="kpi-grid">
+
+            <div class="kpi-card">
+
+                <h3>
+                    Overall Progress
+                </h3>
+
+                <div class="kpi-value">
+                    68%
+                </div>
+
+                <p>
+                    Actual Completion
+                </p>
+
+            </div>
+
+            <div class="kpi-card">
+
+                <h3>
+                    Total Manpower
+                </h3>
+
+                <div class="kpi-value">
+                    124
+                </div>
+
+                <p>
+                    Site Personnel
+                </p>
+
+            </div>
+
+            <div class="kpi-card">
+
+                <h3>
+                    Materials Delivered
+                </h3>
+
+                <div class="kpi-value">
+                    82%
+                </div>
+
+                <p>
+                    Procurement Status
+                </p>
+
+            </div>
+
+            <div class="kpi-card">
+
+                <h3>
+                    Safety Days
+                </h3>
+
+                <div class="kpi-value">
+                    147
+                </div>
+
+                <p>
+                    Without LTI
+                </p>
+
+            </div>
+
+            <div class="kpi-card">
+
+                <h3>
+                    Material Risk
+                </h3>
+
+                <div class="kpi-value">
+                    3
+                </div>
+
+                <p>
+                    Critical Shortages
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- PROJECT HEALTH -->
+
+        <section class="dashboard-card">
+
+            <h2>
+                Project Health Status
+            </h2>
+
+            <div class="health-grid">
+
+                <div class="health-item green">
+
+                    Safety
+
+                    <span>
+                        GOOD
+                    </span>
+
+                </div>
+
+                <div class="health-item yellow">
+
+                    Schedule
+
+                    <span>
+                        WATCH
+                    </span>
+
+                </div>
+
+                <div class="health-item green">
+
+                    Cost
+
+                    <span>
+                        GOOD
+                    </span>
+
+                </div>
+
+                <div class="health-item red">
+
+                    Materials
+
+                    <span>
+                        RISK
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- LOOK AHEAD -->
+
+        <section class="dashboard-card">
+
+            <h2>
+                2-Week Look Ahead Schedule
+            </h2>
+
+            <table class="dashboard-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Activity</th>
+                        <th>Start</th>
+                        <th>Finish</th>
+                        <th>Area</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>Cable Tray Installation</td>
+                        <td>Jun 11</td>
+                        <td>Jun 15</td>
+                        <td>Mill Area</td>
+
+                        <td>
+
+                            <span class="status success">
+                                Ready
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Cable Pulling</td>
+                        <td>Jun 14</td>
+                        <td>Jun 20</td>
+                        <td>Furnace Area</td>
+
+                        <td>
+
+                            <span class="status warning">
+                                Pending Material
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Panel Termination</td>
+                        <td>Jun 18</td>
+                        <td>Jun 22</td>
+                        <td>MCC Room</td>
+
+                        <td>
+
+                            <span class="status success">
+                                Ready
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- PROJECT PROGRESS -->
+
+        <section class="dashboard-card">
+
+            <h2>
+                Project Progress Monitoring
+            </h2>
+
+            <table class="dashboard-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Activity</th>
+                        <th>Planned %</th>
+                        <th>Actual %</th>
+                        <th>Variance</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>Cable Installation</td>
+                        <td>75%</td>
+                        <td>70%</td>
+                        <td>-5%</td>
+
+                        <td>
+
+                            <span class="status warning">
+                                Delayed
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Cable Tray Installation</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>0%</td>
+
+                        <td>
+
+                            <span class="status success">
+                                Complete
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Control Panel Works</td>
+                        <td>60%</td>
+                        <td>58%</td>
+                        <td>-2%</td>
+
+                        <td>
+
+                            <span class="status warning">
+                                Ongoing
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Testing & Commissioning</td>
+                        <td>20%</td>
+                        <td>15%</td>
+                        <td>-5%</td>
+
+                        <td>
+
+                            <span class="status danger">
+                                Behind
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+                <!-- MANPOWER MONITORING -->
+
+        <section class="dashboard-card">
+
+            <div class="section-header">
+
+                <h2>
+                    Manpower Monitoring
+                </h2>
+
+                <button class="btn-export">
+                    Export
+                </button>
+
+            </div>
+
+            <table class="dashboard-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Trade</th>
+                        <th>Planned</th>
+                        <th>Actual</th>
+                        <th>Variance</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>Electricians</td>
+                        <td>35</td>
+                        <td>32</td>
+                        <td>-3</td>
+
+                        <td>
+                            <span class="status warning">
+                                Below Plan
+                            </span>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Technicians</td>
+                        <td>20</td>
+                        <td>22</td>
+                        <td>+2</td>
+
+                        <td>
+                            <span class="status success">
+                                Good
+                            </span>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Helpers</td>
+                        <td>40</td>
+                        <td>40</td>
+                        <td>0</td>
+
+                        <td>
+                            <span class="status success">
+                                On Target
+                            </span>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Supervisors</td>
+                        <td>8</td>
+                        <td>8</td>
+                        <td>0</td>
+
+                        <td>
+                            <span class="status success">
+                                On Target
+                            </span>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Engineers</td>
+                        <td>5</td>
+                        <td>5</td>
+                        <td>0</td>
+
+                        <td>
+                            <span class="status success">
+                                On Target
+                            </span>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- MATERIAL MONITORING -->
+
+        <section class="dashboard-card">
+
+            <div class="section-header">
+
+                <h2>
+                    Material Monitoring
+                </h2>
+
+                <button class="btn-export">
+                    Export
+                </button>
+
+            </div>
+
+            <table class="dashboard-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Material</th>
+                        <th>Required</th>
+                        <th>Delivered</th>
+                        <th>Installed</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>Power Cable 4C x 50mm²</td>
+                        <td>8,000 m</td>
+                        <td>7,200 m</td>
+                        <td>6,400 m</td>
+
+                        <td>
+                            <span class="status success">
+                                Available
+                            </span>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Cable Tray 300mm</td>
+                        <td>2,500 m</td>
+                        <td>2,500 m</td>
+                        <td>2,100 m</td>
+
+                        <td>
+                            <span class="status success">
+                                Complete
+                            </span>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Control Cable</td>
+                        <td>4,500 m</td>
+                        <td>3,200 m</td>
+                        <td>2,700 m</td>
+
+                        <td>
+                            <span class="status warning">
+                                Monitor
+                            </span>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>MCC Panels</td>
+                        <td>24 Units</td>
+                        <td>18 Units</td>
+                        <td>12 Units</td>
+
+                        <td>
+                            <span class="status warning">
+                                Partial
+                            </span>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Field Instruments</td>
+                        <td>140 Units</td>
+                        <td>120 Units</td>
+                        <td>88 Units</td>
+
+                        <td>
+                            <span class="status danger">
+                                Delayed
+                            </span>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- EQUIPMENT MONITORING -->
+
+        <section class="dashboard-card">
+
+            <h2>
+                Equipment Monitoring
+            </h2>
+
+            <table class="dashboard-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Equipment</th>
+                        <th>Qty</th>
+                        <th>Available</th>
+                        <th>In Use</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>Mobile Crane</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>2</td>
+
+                        <td>
+                            <span class="status success">
+                                Operational
+                            </span>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Forklift</td>
+                        <td>4</td>
+                        <td>2</td>
+                        <td>2</td>
+
+                        <td>
+                            <span class="status success">
+                                Operational
+                            </span>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Manlift</td>
+                        <td>5</td>
+                        <td>0</td>
+                        <td>5</td>
+
+                        <td>
+                            <span class="status warning">
+                                Fully Utilized
+                            </span>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Boom Truck</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>1</td>
+
+                        <td>
+                            <span class="status success">
+                                Operational
+                            </span>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- INSPECTION TRACKER -->
+
+        <section class="dashboard-card">
+
+            <h2>
+                Inspection Tracker
+            </h2>
+
+            <table class="dashboard-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>IR No.</th>
+                        <th>Description</th>
+                        <th>Date</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>IR-001</td>
+                        <td>Cable Tray Inspection</td>
+                        <td>Jun 08</td>
+
+                        <td>
+                            <span class="status success">
+                                Approved
+                            </span>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>IR-002</td>
+                        <td>Grounding Inspection</td>
+                        <td>Jun 10</td>
+
+                        <td>
+                            <span class="status warning">
+                                Pending
+                            </span>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>IR-003</td>
+                        <td>MCC Installation</td>
+                        <td>Jun 12</td>
+
+                        <td>
+                            <span class="status success">
+                                Approved
+                            </span>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- RFI TRACKER -->
+
+        <section class="dashboard-card">
+
+            <h2>
+                Request For Information (RFI)
+            </h2>
+
+            <table class="dashboard-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>RFI No.</th>
+                        <th>Subject</th>
+                        <th>Date</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>RFI-015</td>
+                        <td>Cable Routing Clarification</td>
+                        <td>Jun 06</td>
+
+                        <td>
+                            <span class="status warning">
+                                Open
+                            </span>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>RFI-016</td>
+                        <td>Panel Location Revision</td>
+                        <td>Jun 07</td>
+
+                        <td>
+                            <span class="status success">
+                                Closed
+                            </span>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+                <!-- NCR TRACKER -->
+
+        <section class="dashboard-card">
+
+            <h2>
+                NCR Tracker
+            </h2>
+
+            <table class="dashboard-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>NCR No.</th>
+                        <th>Description</th>
+                        <th>Issued Date</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>NCR-001</td>
+                        <td>Improper Cable Support Installation</td>
+                        <td>Jun 05</td>
+
+                        <td>
+                            <span class="status warning">
+                                Open
+                            </span>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>NCR-002</td>
+                        <td>Grounding Continuity Issue</td>
+                        <td>Jun 08</td>
+
+                        <td>
+                            <span class="status success">
+                                Closed
+                            </span>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- PUNCH LIST -->
+
+        <section class="dashboard-card">
+
+            <h2>
+                Punch List Tracker
+            </h2>
+
+            <table class="dashboard-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+                        <th>Description</th>
+                        <th>Area</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>PL-001</td>
+                        <td>Install Missing Cable Marker</td>
+                        <td>MCC Room</td>
+
+                        <td>
+                            <span class="status warning">
+                                Pending
+                            </span>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>PL-002</td>
+                        <td>Terminate Spare Core</td>
+                        <td>Furnace Area</td>
+
+                        <td>
+                            <span class="status success">
+                                Completed
+                            </span>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- CHARTS -->
+
+        <div class="chart-grid">
+
+            <div class="dashboard-card">
+
+                <h2>
+                    Weekly Progress S-Curve
+                </h2>
+
+                <canvas id="progressChart"></canvas>
+
+            </div>
+
+            <div class="dashboard-card">
+
+                <h2>
+                    Weekly Manpower Trend
+                </h2>
+
+                <canvas id="manpowerChart"></canvas>
+
+            </div>
+
+        </div>
+
+        <div class="chart-grid">
+
+            <div class="dashboard-card">
+
+                <h2>
+                    Material Delivery Status
+                </h2>
+
+                <canvas id="materialChart"></canvas>
+
+            </div>
+
+            <div class="dashboard-card">
+
+                <h2>
+                    KPI Summary
+                </h2>
+
+                <div class="kpi-summary">
+
+                    <div>
+                        SPI
+                        <span>0.96</span>
+                    </div>
+
+                    <div>
+                        CPI
+                        <span>1.03</span>
+                    </div>
+
+                    <div>
+                        Planned %
+                        <span>72%</span>
+                    </div>
+
+                    <div>
+                        Actual %
+                        <span>68%</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- DAILY REPORT -->
+
+        <section class="dashboard-card">
+
+            <h2>
+                Daily Accomplishment Report
+            </h2>
+
+            <div class="report-grid">
+
+                <div class="report-box">
+
+                    <h3>
+                        Accomplishments
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Installed 320m cable tray.
+                        </li>
+
+                        <li>
+                            Pulled 1,150m power cables.
+                        </li>
+
+                        <li>
+                            Completed MCC Panel No.3 termination.
+                        </li>
+
+                        <li>
+                            Conducted continuity testing.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="report-box">
+
+                    <h3>
+                        Safety Observation
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Zero Lost Time Incident.
+                        </li>
+
+                        <li>
+                            Daily toolbox meeting completed.
+                        </li>
+
+                        <li>
+                            PPE compliance at 100%.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="report-box">
+
+                    <h3>
+                        Constraints
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Awaiting remaining control cables.
+                        </li>
+
+                        <li>
+                            Limited crane availability.
+                        </li>
+
+                        <li>
+                            Rain affected outdoor works.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="report-box">
+
+                    <h3>
+                        Tomorrow Activities
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Continue cable pulling.
+                        </li>
+
+                        <li>
+                            Begin instrument installation.
+                        </li>
+
+                        <li>
+                            Complete MCC testing.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- FOOTER -->
+
+        <footer class="dashboard-footer">
+
+            <p>
+                © 2026 PH Pertama ISTC Project Control System
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<!-- CHART JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>
